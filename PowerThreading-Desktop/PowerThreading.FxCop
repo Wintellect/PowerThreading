@@ -1,0 +1,2335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.35" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">http://www.gotdotnet.com/team/fxcop//xsl/1.35/FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-us" />
+  <VersionAware>False</VersionAware>
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/bin/Debug/Wintellect.Threading.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.35">
+  <Namespaces>
+   <Namespace Name="Wintellect.Threading.Abortable">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-10-22 22:35:21Z">
+      <Issue>
+       <Item>Wintellect.Threading.Abortable</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Wintellect.Threading.ReaderWriterGate">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-10-22 22:35:21Z">
+      <Issue>
+       <Item>Wintellect.Threading.ReaderWriterGate</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Wintellect.Utility">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-10-22 22:35:21Z">
+      <Issue>
+       <Item>Wintellect.Utility</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Wintellect.Utility.StateManager">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-10-22 22:35:21Z">
+      <Issue>
+       <Item>Wintellect.Utility.StateManager</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/bin/Debug/Wintellect.Threading.dll">
+    <Modules>
+     <Module Name="wintellect.threading.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2006-10-22 22:35:21Z">
+        <Issue Name="NoStrongName">
+         <Item>Wintellect.Threading</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Wintellect.Threading">
+        <Types>
+         <Type Name="InterlockedEx">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Ex</Item>
+             <Item>Wintellect.Threading.InterlockedEx</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="IfThen(T&amp;,T,T):System.Boolean">
+            <Messages>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2006-10-22 22:35:21Z">
+              <Issue Level="CriticalWarning">
+               <Item>value</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="IfThen(T&amp;,T,T,T&amp;):System.Boolean">
+            <Messages>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2006-10-22 22:35:21Z">
+              <Issue Level="CriticalWarning">
+               <Item>value</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ThreadUtility">
+          <Members>
+           <Member Name="BeginBackgroundProcessingMode():System.IDisposable">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.BeginBackgroundProcessingMode():IDisposable</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.ThreadUtility.BeginBackgroundProcessingMode : IDisposable</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CancelSynchronousIO(Microsoft.Win32.SafeHandles.SafeWaitHandle):System.Boolean">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-23 00:43:13Z">
+              <Issue>
+               <Item>ThreadUtility.CancelSynchronousIO(SafeWaitHandle):Boolean</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.ThreadUtility.CancelSynchronousIO(Microsoft.Win32.SafeHandles.SafeWaitHandle) : Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EndBackgroundProcessingMode():System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.EndBackgroundProcessingMode():Void</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.ThreadUtility.EndBackgroundProcessingMode : Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetCurrentProcessorNumber():System.Int32">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentProcessorNumber():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentProcessorNumber():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue Certainty="50">
+               <Item>GetCurrentProcessorNumber</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentProcessorNumber():Int32</Item>
+               <Item>Kernel32</Item>
+               <Item>GetCurrentProcessorNumber</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetCurrentWin32ThreadHandle():Microsoft.Win32.SafeHandles.SafeWaitHandle">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentWin32ThreadHandle():SafeWaitHandle</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentWin32ThreadHandle():SafeWaitHandle</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue Certainty="50">
+               <Item>GetCurrentWin32ThreadHandle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetCurrentWin32ThreadId():System.Int32">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentWin32ThreadId():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetCurrentWin32ThreadId():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue Certainty="50">
+               <Item>GetCurrentWin32ThreadId</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetWindowThreadProcessId(System.IntPtr,System.Int32&amp;):System.Int32">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.GetWindowThreadProcessId(IntPtr, Int32&amp;):Int32</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="IsSingleCpuMachine">
+            <Messages>
+             <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IsSingleCpuMachine</Item>
+               <Item>&lt;Unknown&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="nativeCancelSynchronousIO(Microsoft.Win32.SafeHandles.SafeWaitHandle):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-23 00:43:13Z">
+              <Issue>
+               <Item>ThreadUtility.nativeCancelSynchronousIO(SafeWaitHandle):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-23 00:43:13Z">
+              <Issue>
+               <Item>ThreadUtility.nativeCancelSynchronousIO(SafeWaitHandle):Boolean</Item>
+               <Item>Kernel32</Item>
+               <Item>CancelSynchronousIo</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="nativeOpenThread(Wintellect.Threading.ThreadUtility+ThreadRights,System.Boolean,System.Int32):Microsoft.Win32.SafeHandles.SafeWaitHandle">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.nativeOpenThread(ThreadRights, Boolean, Int32):SafeWaitHandle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OpenThread(Wintellect.Threading.ThreadUtility+ThreadRights,System.Boolean,System.Int32):Microsoft.Win32.SafeHandles.SafeWaitHandle">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.OpenThread(ThreadRights, Boolean, Int32):SafeWaitHandle</Item>
+               <Item>SafeHandle.get_IsInvalid():Boolean</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.SafeHandle.get_IsInvalid : Boolean&#xD;&#xA;-&gt;Wintellect.Threading.ThreadUtility.OpenThread(Wintellect.Threading.ThreadUtility+ThreadRights,System.Boolean,System.Int32) : SafeWaitHandle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SetThreadPriority(Microsoft.Win32.SafeHandles.SafeWaitHandle,Wintellect.Threading.ThreadUtility+BackgroundProcessingMode):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.SetThreadPriority(SafeWaitHandle, BackgroundProcessingMode):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SwitchToThread():System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.SwitchToThread():Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadUtility.SwitchToThread():Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ThreadUtility+ThreadRights">
+          <Messages>
+           <Message TypeName="DoNotMarkEnumsWithFlags" Category="Microsoft.Usage" CheckId="CA2217" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.ThreadUtility+ThreadRights</Item>
+             <Item>0x4</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="WaitChain">
+          <Members>
+           <Member Name=".cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Wintellect.Threading.WaitChain</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CloseThreadWaitChainSession(System.IntPtr):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.CloseThreadWaitChainSession(IntPtr):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.CloseThreadWaitChainSession(IntPtr):Void</Item>
+               <Item>AdvApi32</Item>
+               <Item>CloseThreadWaitChainSession</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Dispose():System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.Dispose():Void</Item>
+               <Item>SafeHandle.Dispose():Void</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.SafeHandle.Dispose : Void&#xD;&#xA;-&gt;Wintellect.Threading.WaitChain.Dispose : Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetCurrentThreadId():System.Int32">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.GetCurrentThreadId():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.GetCurrentThreadId():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue Certainty="50">
+               <Item>GetCurrentThreadId</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetProcAddress(Wintellect.Threading.WaitChain+SafeModuleHandle,System.String):System.IntPtr">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.GetProcAddress(SafeModuleHandle, String):IntPtr</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetThreadWaitChain(Wintellect.Threading.WaitChain+SafeWctHandle,System.IntPtr,Wintellect.Threading.WaitChain+OutOfProcess,System.Int32,System.Int32&amp;,System.Byte[],System.Boolean&amp;):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.GetThreadWaitChain(SafeWctHandle, IntPtr, OutOfProcess, Int32, Int32&amp;, Byte[], Boolean&amp;):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.GetThreadWaitChain(SafeWctHandle, IntPtr, OutOfProcess, Int32, Int32&amp;, Byte[], Boolean&amp;):Boolean</Item>
+               <Item>AdvApi32</Item>
+               <Item>GetThreadWaitChain</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="LoadLibraryW(System.String):Wintellect.Threading.WaitChain+SafeModuleHandle">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.LoadLibraryW(String):SafeModuleHandle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OpenThreadWaitChainSession(Wintellect.Threading.WaitChain+WctSession,Wintellect.Threading.WaitChain+WaitChainCallback):Wintellect.Threading.WaitChain+SafeWctHandle">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.OpenThreadWaitChainSession(WctSession, WaitChainCallback):SafeWctHandle</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.OpenThreadWaitChainSession(WctSession, WaitChainCallback):SafeWctHandle</Item>
+               <Item>AdvApi32</Item>
+               <Item>OpenThreadWaitChainSession</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="RegisterWaitChainCOMCallback(System.IntPtr,System.IntPtr):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.RegisterWaitChainCOMCallback(IntPtr, IntPtr):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.RegisterWaitChainCOMCallback(IntPtr, IntPtr):Void</Item>
+               <Item>AdvApi32</Item>
+               <Item>RegisterWaitChainCOMCallback</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Traverse(System.Int32,Wintellect.Threading.WaitChain+OutOfProcess,System.Boolean&amp;):System.Collections.Generic.IList`1&lt;Wintellect.Threading.WaitChainNode&gt;">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChain.Traverse(Int32, OutOfProcess, Boolean&amp;):IList`1&lt;Wintellect.Threading.WaitChainNode&gt;</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.WaitChain.Traverse(System.Int32,Wintellect.Threading.WaitChain+OutOfProcess,System.Boolean@) : IList`1&lt;Wintellect.Threading.WaitChainNode&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WaitChain+SafeModuleHandle">
+          <Members>
+           <Member Name="FreeLibrary(System.IntPtr):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SafeModuleHandle.FreeLibrary(IntPtr):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WaitChainNode">
+          <Members>
+           <Member Name="Alertable">
+            <Messages>
+             <Message Id="Alertable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-10-24 11:43:55Z">
+              <Issue Name="Member">
+               <Item>Alertable</Item>
+               <Item>WaitChainNode.Alertable:Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="VerifyThread():System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>WaitChainNode.VerifyThread():Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>Property not valid for this ObjectType.</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.Abortable">
+        <Types>
+         <Type Name="AbortableTask">
+          <Members>
+           <Member Name=".ctor(System.Boolean,Wintellect.Threading.Abortable.AbortVia,System.Threading.ParameterizedThreadStart)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>AbortableTask.AbortableTask(Boolean, AbortVia, ParameterizedThreadStart)</Item>
+               <Item>m_appDomain</Item>
+               <Item>System.AppDomain</Item>
+               <Item>null</Item>
+              </Issue>
+              <Issue>
+               <Item>AbortableTask.AbortableTask(Boolean, AbortVia, ParameterizedThreadStart)</Item>
+               <Item>m_thread</Item>
+               <Item>System.Threading.Thread</Item>
+               <Item>null</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TaskState">
+          <Members>
+           <Member Name="op_Implicit(System.Int32):Wintellect.Threading.Abortable.TaskState">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Multiple">
+               <Item>ToXXX</Item>
+               <Item>FromXXX</Item>
+               <Item>TaskState.op_Implicit(Int32):TaskState</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.AsyncProgModel">
+        <Types>
+         <Type Name="AsyncEnumeratorProcessor">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+            <Issue>
+             <Item>Wintellect.Threading.AsyncProgModel.AsyncEnumeratorProcessor</Item>
+             <Item>System.Threading.ManualResetEvent</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>AsyncEnumeratorProcessor.AsyncEnumeratorProcessor()</Item>
+               <Item>m_PendingAsyncOps</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>AsyncEnumeratorProcessor.AsyncEnumeratorProcessor()</Item>
+               <Item>m_done</Item>
+               <Item>System.Threading.ManualResetEvent</Item>
+               <Item>null</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AsyncOpResult">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Op</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.AsyncOpResult</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor(System.String)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>AsyncOpResult.AsyncOpResult(String)</Item>
+               <Item>m_Exception</Item>
+               <Item>System.Exception</Item>
+               <Item>null</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AsyncOpResult`2">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Op</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.AsyncOpResult`2</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="AsyncOpResultState">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Op</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.AsyncOpResultState</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="AsyncResult`1">
+          <Members>
+           <Member Name="GetAsyncCallbackHelper():System.AsyncCallback">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>GetAsyncCallbackHelper</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AsyncResultNoResult">
+          <Members>
+           <Member Name=".ctor(System.AsyncCallback,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>AsyncResultNoResult.AsyncResultNoResult(AsyncCallback, Object)</Item>
+               <Item>m_CompletedState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetAsyncCallbackHelper():System.AsyncCallback">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>GetAsyncCallbackHelper</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SetAsCompleted(System.Exception,System.Boolean):System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>AsyncResultNoResult.SetAsCompleted(Exception, Boolean):Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>You can set a result only once</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CountdownTimer">
+          <Members>
+           <Member Name="BeginCountdown(System.Int32,System.AsyncCallback,System.Object):System.IAsyncResult">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>CountdownTimer.BeginCountdown(Int32, AsyncCallback, Object):IAsyncResult</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EndCountdown(System.IAsyncResult):System.Void">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>CountdownTimer.EndCountdown(IAsyncResult):Void</Item>
+              </Issue>
+             </Message>
+             <Message Id="ar" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ar</Item>
+               <Item>CountdownTimer.EndCountdown(IAsyncResult):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DelegateSub0Params">
+          <Messages>
+           <Message Id="Params" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Params</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.DelegateSub0Params</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="MultiAsyncResult">
+          <Messages>
+           <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Multi</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.MultiAsyncResult</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor(System.AsyncCallback,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>MultiAsyncResult.MultiAsyncResult(AsyncCallback, Object)</Item>
+               <Item>m_FailedOps</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>MultiAsyncResult.MultiAsyncResult(AsyncCallback, Object)</Item>
+               <Item>m_QueuedOps</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>MultiAsyncResult.MultiAsyncResult(AsyncCallback, Object)</Item>
+               <Item>m_State</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CreateAsyncOp(System.String):Wintellect.Threading.AsyncProgModel.PendingAsyncOp">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Op</Item>
+               <Item>MultiAsyncResult.CreateAsyncOp(String):PendingAsyncOp</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CreateAsyncOp(System.String,TAsyncObj):Wintellect.Threading.AsyncProgModel.PendingAsyncOp`1&lt;TAsyncObj&gt;">
+            <Messages>
+             <Message TypeName="MembersShouldDifferByMoreThanReturnType" Category="Microsoft.Usage" CheckId="CA2223" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Wintellect.Threading.AsyncProgModel.MultiAsyncResult.CreateAsyncOp(System.String,type parameter.TAsyncObj)</Item>
+              </Issue>
+             </Message>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Op</Item>
+               <Item>MultiAsyncResult.CreateAsyncOp(String, TAsyncObj):PendingAsyncOp`1&lt;TAsyncObj&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CreateAsyncOp(System.String,TAsyncObj):Wintellect.Threading.AsyncProgModel.PendingAsyncOp`2&lt;TAsyncObj,TResult&gt;">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>MultiAsyncResult.CreateAsyncOp(String, TAsyncObj):PendingAsyncOp`2&lt;TAsyncObj,TResult&gt;</Item>
+               <Item>TResult</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MembersShouldDifferByMoreThanReturnType" Category="Microsoft.Usage" CheckId="CA2223" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Wintellect.Threading.AsyncProgModel.MultiAsyncResult.CreateAsyncOp(System.String,type parameter.TAsyncObj)</Item>
+              </Issue>
+             </Message>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Op</Item>
+               <Item>MultiAsyncResult.CreateAsyncOp(String, TAsyncObj):PendingAsyncOp`2&lt;TAsyncObj,TResult&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CreateAsyncOp(System.String,TAsyncObj,TState):Wintellect.Threading.AsyncProgModel.PendingAsyncOp`3&lt;TAsyncObj,TState,TResult&gt;">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>MultiAsyncResult.CreateAsyncOp(String, TAsyncObj, TState):PendingAsyncOp`3&lt;TAsyncObj,TState,TResult&gt;</Item>
+               <Item>TResult</Item>
+              </Issue>
+             </Message>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Op</Item>
+               <Item>MultiAsyncResult.CreateAsyncOp(String, TAsyncObj, TState):PendingAsyncOp`3&lt;TAsyncObj,TState,TResult&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EndMultiAsyncResult(System.IAsyncResult):System.Boolean">
+            <Messages>
+             <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Multi</Item>
+               <Item>MultiAsyncResult.EndMultiAsyncResult(IAsyncResult):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message Id="ar" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ar</Item>
+               <Item>MultiAsyncResult.EndMultiAsyncResult(IAsyncResult):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetAsyncOpResults():Wintellect.Threading.AsyncProgModel.AsyncOpResult[]">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Op</Item>
+               <Item>MultiAsyncResult.GetAsyncOpResults():AsyncOpResult[]</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PendingAsyncOp">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2006-10-22 22:35:21Z">
+            <Issue Name="Type">
+             <Item>Op</Item>
+             <Item>Wintellect.Threading.AsyncProgModel.PendingAsyncOp</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="MultiAsyncResult">
+            <Messages>
+             <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-10-22 22:35:21Z">
+              <Issue Name="Member">
+               <Item>Multi</Item>
+               <Item>PendingAsyncOp.MultiAsyncResult:MultiAsyncResult</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PendingAsyncOp`1">
+          <Members>
+           <Member Name="GetAsyncObj():TAsyncObj">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>GetAsyncObj</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PendingAsyncOp`3">
+          <Members>
+           <Member Name="GetState():TState">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue Certainty="50">
+               <Item>GetState</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.CallbackThreadPool">
+        <Types>
+         <Type Name="CallbackThreadPool">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>CallbackThreadPool</Item>
+             <Item>Wintellect.Threading.CallbackThreadPool</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor(System.Int32,System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>CallbackThreadPool.CallbackThreadPool(Int32, Int32, Int32)</Item>
+               <Item>m_itemsPosted</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>CallbackThreadPool.CallbackThreadPool(Int32, Int32, Int32)</Item>
+               <Item>m_itemsProcessed</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>CallbackThreadPool.CallbackThreadPool(Int32, Int32, Int32)</Item>
+               <Item>m_maxThreadsEverInPool</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>CallbackThreadPool.CallbackThreadPool(Int32, Int32, Int32)</Item>
+               <Item>m_numBusyThreads</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>CallbackThreadPool.CallbackThreadPool(Int32, Int32, Int32)</Item>
+               <Item>m_numThreadsInPool</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IOCompletionPort">
+          <Members>
+           <Member Name="CreateIoCompletionPort(Microsoft.Win32.SafeHandles.SafeFileHandle,Wintellect.Threading.CallbackThreadPool.SafeIOCompletionPortHandle,System.UIntPtr,System.UInt32):Wintellect.Threading.CallbackThreadPool.SafeIOCompletionPortHandle">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.CreateIoCompletionPort(SafeFileHandle, SafeIOCompletionPortHandle, UIntPtr, UInt32):SafeIOCompletionPortHandle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Dispose(System.Boolean):System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.Dispose(Boolean):Void</Item>
+               <Item>SafeHandle.Close():Void</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.SafeHandle.Close : Void&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.Dispose(System.Boolean) : Void&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.Dispose : Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetQueuedCompletionStatus(Wintellect.Threading.CallbackThreadPool.SafeIOCompletionPortHandle,System.UInt32&amp;,System.IntPtr&amp;,System.IntPtr&amp;,System.UInt32):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.GetQueuedCompletionStatus(SafeIOCompletionPortHandle, UInt32&amp;, IntPtr&amp;, IntPtr&amp;, UInt32):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetStatus(System.Int32,System.Boolean&amp;,System.Threading.WaitCallback&amp;,System.Object&amp;):System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.GetStatus(Int32, Boolean&amp;, WaitCallback&amp;, Object&amp;):Void</Item>
+               <Item>GCHandle.Free():Void</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.GCHandle.Free : Void&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.GetStatus(System.Int32,System.Boolean@,System.Threading.WaitCallback@,System.Object@) : Void</Item>
+              </Issue>
+              <Issue>
+               <Item>IOCompletionPort.GetStatus(Int32, Boolean&amp;, WaitCallback&amp;, Object&amp;):Void</Item>
+               <Item>GCHandle.get_Target():Object</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.GCHandle.get_Target : Object&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.GetStatus(System.Int32,System.Boolean@,System.Threading.WaitCallback@,System.Object@) : Void</Item>
+              </Issue>
+              <Issue>
+               <Item>IOCompletionPort.GetStatus(Int32, Boolean&amp;, WaitCallback&amp;, Object&amp;):Void</Item>
+               <Item>GCHandle.op_Explicit(IntPtr):GCHandle</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.GCHandle.op_Explicit(System.IntPtr) : GCHandle&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.GetStatus(System.Int32,System.Boolean@,System.Threading.WaitCallback@,System.Object@) : Void</Item>
+              </Issue>
+              <Issue>
+               <Item>IOCompletionPort.GetStatus(Int32, Boolean&amp;, WaitCallback&amp;, Object&amp;):Void</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.GetStatus(System.Int32,System.Boolean@,System.Threading.WaitCallback@,System.Object@) : Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UseGenericsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1007" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.GetStatus(Int32, Boolean&amp;, WaitCallback&amp;, Object&amp;):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="PostQueuedCompletionStatus(Wintellect.Threading.CallbackThreadPool.SafeIOCompletionPortHandle,System.UInt32,System.IntPtr,System.IntPtr):System.Boolean">
+            <Messages>
+             <Message TypeName="DeclarePInvokesCorrectly" Category="Microsoft.Interoperability" CheckId="CA1415" Created="2006-10-22 22:35:21Z" FixCategory="NonBreaking">
+              <Issue Name="NativeOverlapped">
+               <Item>IOCompletionPort.PostQueuedCompletionStatus(SafeIOCompletionPortHandle, UInt32, IntPtr, IntPtr):Boolean</Item>
+               <Item>state</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.PostQueuedCompletionStatus(SafeIOCompletionPortHandle, UInt32, IntPtr, IntPtr):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="PostStatus(System.Threading.WaitCallback,System.Object):System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.PostStatus(WaitCallback, Object):Void</Item>
+               <Item>GCHandle.Alloc(Object):GCHandle</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.GCHandle.Alloc(System.Object) : GCHandle&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.PostStatus(System.Threading.WaitCallback,System.Object) : Void</Item>
+              </Issue>
+              <Issue>
+               <Item>IOCompletionPort.PostStatus(WaitCallback, Object):Void</Item>
+               <Item>GCHandle.Free():Void</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.GCHandle.Free : Void&#xD;&#xA;-&gt;Wintellect.Threading.CallbackThreadPool.IOCompletionPort.PostStatus(System.Threading.WaitCallback,System.Object) : Void</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.ArgumentNullException.#ctor(System.String,System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.PostStatus(WaitCallback, Object):Void</Item>
+               <Item>2</Item>
+               <Item>ArgumentNullException.ArgumentNullException(String, String)</Item>
+               <Item>delegate must not be null</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.OverflowException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>IOCompletionPort.PostStatus(WaitCallback, Object):Void</Item>
+               <Item>1</Item>
+               <Item>OverflowException.OverflowException(String)</Item>
+               <Item>Failed to post callback</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SafeIOCompletionPortHandle">
+          <Members>
+           <Member Name="CloseHandle(System.IntPtr):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SafeIOCompletionPortHandle.CloseHandle(IntPtr):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.Collections">
+        <Types>
+         <Type Name="LockFreeNode`1">
+          <Members>
+           <Member Name="Item">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Item</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Next">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Next</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LockFreeQueue`1">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.Collections.LockFreeQueue`1</Item>
+             <Item>Queue</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="LockFreeStack`1">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.Collections.LockFreeStack`1</Item>
+             <Item>Stack</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="NodeManager`1">
+          <Members>
+           <Member Name="Default">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Default</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.LogicalProcessor">
+        <Types>
+         <Type Name="CacheAssociativity">
+          <Messages>
+           <Message TypeName="EnumStorageShouldBeInt32" Category="Microsoft.Design" CheckId="CA1028" Created="2006-10-22 22:35:21Z">
+            <Issue Name="NotInt32">
+             <Item>Wintellect.Threading.LogicalProcessor.CacheAssociativity</Item>
+             <Item>System.Byte</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="CacheLevel">
+          <Messages>
+           <Message TypeName="EnumStorageShouldBeInt32" Category="Microsoft.Design" CheckId="CA1028" Created="2006-10-22 22:35:21Z">
+            <Issue Name="NotInt32">
+             <Item>Wintellect.Threading.LogicalProcessor.CacheLevel</Item>
+             <Item>System.Byte</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="LogicalProcessorInformation">
+          <Members>
+           <Member Name="GetLogicalProcessorInformation():Wintellect.Threading.LogicalProcessor.LogicalProcessorInformation[]">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>LogicalProcessorInformation.GetLogicalProcessorInformation():LogicalProcessorInformation[]</Item>
+               <Item>Marshal.GetLastWin32Error():Int32</Item>
+               <Item>&#xD;&#xA;-&gt;System.Runtime.InteropServices.Marshal.GetLastWin32Error : Int32&#xD;&#xA;-&gt;Wintellect.Threading.LogicalProcessor.LogicalProcessorInformation.GetLogicalProcessorInformation : LogicalProcessorInformation[]</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetLogicalProcessorInformation(System.Byte*,System.Int32&amp;):System.Boolean">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>LogicalProcessorInformation.GetLogicalProcessorInformation(Byte*, Int32&amp;):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>LogicalProcessorInformation.GetLogicalProcessorInformation(Byte*, Int32&amp;):Boolean</Item>
+               <Item>Kernel32</Item>
+               <Item>GetLogicalProcessorInformation</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="VerifyRelationship(Wintellect.Threading.LogicalProcessor.LogicalProcessorRelationship):System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>LogicalProcessorInformation.VerifyRelationship(LogicalProcessorRelationship):Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>Property not valid for this relationship.</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LogicalProcessorRelationship">
+          <Messages>
+           <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Created="2006-10-23 00:26:57Z" FixCategory="Breaking">
+            <Issue Name="FlagsRename">
+             <Item>Wintellect.Threading.LogicalProcessor.LogicalProcessorRelationship</Item>
+             <Item>LogicalProcessorRelationship.ProcessorCore</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="FlagsEnumsShouldHavePluralNames" Category="Microsoft.Naming" CheckId="CA1714" Created="2006-10-23 00:26:57Z">
+            <Issue>
+             <Item>LogicalProcessorRelationship</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.ReaderWriterGate">
+        <Types>
+         <Type Name="ReaderWriterGate">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>ReaderWriterGate</Item>
+             <Item>Wintellect.Threading.ReaderWriterGate</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+            <Issue>
+             <Item>Wintellect.Threading.ReaderWriterGate.ReaderWriterGate</Item>
+             <Item>Wintellect.Threading.ResourceLocks.MonitorResourceLock</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ReaderWriterGate.ReaderWriterGate()</Item>
+               <Item>m_numReaders</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EndRead(System.IAsyncResult):System.Void">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ReaderWriterGate.EndRead(IAsyncResult):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EndWrite(System.IAsyncResult):System.Void">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ReaderWriterGate.EndWrite(IAsyncResult):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.ResourceLocks">
+        <Types>
+         <Type Name="OneManyResourceLock">
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>OneManyResourceLock.OneManyResourceLock()</Item>
+               <Item>m_LockState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OneManySpinResourceLock">
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>OneManySpinResourceLock.OneManySpinResourceLock()</Item>
+               <Item>m_LockState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OneResourceLock">
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>OneResourceLock.OneResourceLock()</Item>
+               <Item>m_LockState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OptexResourceLock">
+          <Members>
+           <Member Name=".ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>OptexResourceLock.OptexResourceLock()</Item>
+               <Item>m_LockState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ResourceLock">
+          <Members>
+           <Member Name=".cctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ResourceLock.ResourceLock()</Item>
+               <Item>s_PerformDeadlockDetection</Item>
+               <Item>System.Boolean</Item>
+               <Item>false</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Equals(System.Object):System.Boolean">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>'obj'</Item>
+               <Item>ResourceLock.Equals(Object):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Name">
+            <Accessors>
+             <Accessor Name="set_Name(System.String):System.Void">
+              <Messages>
+               <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+                <Issue>
+                 <Item>ResourceLock.set_Name(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+                 <Item>This property has already been set and cannot be modified.</Item>
+                </Issue>
+                <Notes>
+                 <User Name="v-JeffrR">
+                  <Note Id="0" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="ToString(System.String,System.IFormatProvider):System.String">
+            <Messages>
+             <Message Id="System.FormatException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ResourceLock.ToString(String, IFormatProvider):String</Item>
+               <Item>1</Item>
+               <Item>FormatException.FormatException(String)</Item>
+               <Item>Unknown format string: __</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ResourceLockFlags">
+          <Messages>
+           <Message TypeName="DoNotMarkEnumsWithFlags" Category="Microsoft.Usage" CheckId="CA2217" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.ResourceLockFlags</Item>
+             <Item>0x80000000, 0x100000000, 0x200000000, 0x400000000, 0x800000000, 0x1000000000, 0x2000000000, 0x4000000000, 0x8000000000, 0x10000000000, 0x20000000000, 0x40000000000, 0x80000000000, 0x100000000000, 0x200000000000, 0x400000000000, 0x800000000000, 0x1000000000000, 0x2000000000000, 0x4000000000000, 0x8000000000000, 0x10000000000000, 0x20000000000000, 0x40000000000000, 0x80000000000000, 0x100000000000000, 0x200000000000000, 0x400000000000000, 0x800000000000000, 0x1000000000000000, 0x2000000000000000, 0x4000000000000000, 0x8000000000000000</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.ResourceLockFlags</Item>
+             <Item>Flags</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ResourceLockFlagsHelper">
+          <Members>
+           <Member Name="ImmuneFromDeadlockDetection">
+            <Accessors>
+             <Accessor Name="get_ImmuneFromDeadlockDetection():System.Boolean">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2006-10-22 22:35:21Z">
+                <Issue>
+                 <Item>ResourceLockFlagsHelper.get_ImmuneFromDeadlockDetection():Boolean</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SlimResourceLock">
+          <Members>
+           <Member Name="AcquireSRWLockExclusive(System.IntPtr&amp;):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.AcquireSRWLockExclusive(IntPtr&amp;):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.AcquireSRWLockExclusive(IntPtr&amp;):Void</Item>
+               <Item>Kernel32</Item>
+               <Item>AcquireSRWLockExclusive</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="AcquireSRWLockShared(System.IntPtr&amp;):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.AcquireSRWLockShared(IntPtr&amp;):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.AcquireSRWLockShared(IntPtr&amp;):Void</Item>
+               <Item>Kernel32</Item>
+               <Item>AcquireSRWLockShared</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="InitializeSRWLock(System.IntPtr&amp;):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.InitializeSRWLock(IntPtr&amp;):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.InitializeSRWLock(IntPtr&amp;):Void</Item>
+               <Item>Kernel32</Item>
+               <Item>InitializeSRWLock</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ReleaseSRWLockExclusive(System.IntPtr&amp;):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.ReleaseSRWLockExclusive(IntPtr&amp;):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.ReleaseSRWLockExclusive(IntPtr&amp;):Void</Item>
+               <Item>Kernel32</Item>
+               <Item>ReleaseSRWLockExclusive</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ReleaseSRWLockShared(System.IntPtr&amp;):System.Void">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.ReleaseSRWLockShared(IntPtr&amp;):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>SlimResourceLock.ReleaseSRWLockShared(IntPtr&amp;):Void</Item>
+               <Item>Kernel32</Item>
+               <Item>ReleaseSRWLockShared</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Threading.ResourceLocks.Diagnostics">
+        <Types>
+         <Type Name="DeadlockDetector">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2006-10-22 22:35:21Z" FixCategory="Breaking">
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockDetector</Item>
+             <Item>Wintellect.Utility.Disposer</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockDetector</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DeadlockException">
+          <Messages>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2006-10-22 22:35:21Z">
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockException</Item>
+             <Item>public DeadlockException()</Item>
+            </Issue>
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockException</Item>
+             <Item>public DeadlockException(String)</Item>
+            </Issue>
+            <Issue>
+             <Item>Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockException</Item>
+             <Item>public DeadlockException(String, Exception)</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>DeadlockException.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>Exception.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>&#xD;&#xA;-&gt;System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) : Void&#xD;&#xA;-&gt;Wintellect.Threading.ResourceLocks.Diagnostics.DeadlockException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) : Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="OverrideLinkDemandsShouldBeIdenticalToBase" Category="Microsoft.Security" CheckId="CA2123" Created="2006-10-22 22:35:21Z">
+              <Issue Name="BaseOnly">
+               <Item>DeadlockException.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>Exception.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]</Item>
+              </Issue>
+              <Issue Name="BaseOnly">
+               <Item>DeadlockException.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>ISerializable.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+               <Item>[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SecureGetObjectDataOverrides" Category="Microsoft.Security" CheckId="CA2110" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>DeadlockException.GetObjectData(SerializationInfo, StreamingContext):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExclusiveOwnerResourceLockHelper">
+          <Members>
+           <Member Name=".ctor(Wintellect.Threading.ResourceLocks.ResourceLock)">
+            <Messages>
+             <Message Id="System.ArgumentException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ExclusiveOwnerResourceLockHelper.ExclusiveOwnerResourceLockHelper(ResourceLock)</Item>
+               <Item>1</Item>
+               <Item>ArgumentException.ArgumentException(String)</Item>
+               <Item>resLock must identify a ResourceLock that does not support recursion</Item>
+              </Issue>
+              <Issue>
+               <Item>ExclusiveOwnerResourceLockHelper.ExclusiveOwnerResourceLockHelper(ResourceLock)</Item>
+               <Item>1</Item>
+               <Item>ArgumentException.ArgumentException(String)</Item>
+               <Item>resLock must identify a ResourceLock that is really a mutual-exclusive lock</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="BeforeRelease():System.IDisposable">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ExclusiveOwnerResourceLockHelper.BeforeRelease():IDisposable</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>Calling thread doesn't own this lock!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RecursionResourceLockModifier">
+          <Members>
+           <Member Name=".ctor(Wintellect.Threading.ResourceLocks.ResourceLock,System.Int32)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>'resLock'</Item>
+               <Item>RecursionResourceLockModifier.RecursionResourceLockModifier(ResourceLock, Int32)</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="AddThreadIdWithRecurseCountOf1(System.Int32):System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>RecursionResourceLockModifier.AddThreadIdWithRecurseCountOf1(Int32):Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>More current reader threads than allowed!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDoneReading():System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>RecursionResourceLockModifier.OnDoneReading():Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>Calling thread doesn't own the lock for reading!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDoneWriting():System.Void">
+            <Messages>
+             <Message Id="System.InvalidOperationException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>RecursionResourceLockModifier.OnDoneWriting():Void</Item>
+               <Item>1</Item>
+               <Item>InvalidOperationException.InvalidOperationException(String)</Item>
+               <Item>Calling thread doesn't own this lock for writing!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ResourceLockDelegator">
+          <Members>
+           <Member Name=".ctor(Wintellect.Threading.ResourceLocks.ResourceLock)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>'resLock'</Item>
+               <Item>ResourceLockDelegator.ResourceLockDelegator(ResourceLock)</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StatisticsGatheringResourceLockObserver">
+          <Members>
+           <Member Name=".ctor(Wintellect.Threading.ResourceLocks.ResourceLock)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReadRequests</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReaderMaxHoldTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReaderMaxWaitTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReaderMinHoldTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReadersDone</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReadersReading</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_ReadersWaiting</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WriteRequests</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WriterMaxHoldTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WriterMaxWaitTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WriterMinHoldTime</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WritersDone</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WritersWaiting</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>StatisticsGatheringResourceLockObserver.StatisticsGatheringResourceLockObserver(ResourceLock)</Item>
+               <Item>m_WritersWriting</Item>
+               <Item>System.Int64</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ThreadSafeCheckerResourceLockObserver">
+          <Members>
+           <Member Name=".ctor(Wintellect.Threading.ResourceLocks.ResourceLock)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.ThreadSafeCheckerResourceLockObserver(ResourceLock)</Item>
+               <Item>m_LockState</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Dispose(System.Boolean):System.Void">
+            <Messages>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.Dispose(Boolean):Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(String):Void</Item>
+               <Item>Lock held by readers while being disposed</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.Dispose(Boolean):Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(String):Void</Item>
+               <Item>Lock held by a writer while being disposed</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDoneReading():System.Void">
+            <Messages>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnDoneReading():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(String):Void</Item>
+               <Item>Done reading while already writing!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifySomeReaders(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnDoneReading():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifySomeReaders(String):Void</Item>
+               <Item>Done reading while not reading!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDoneWriting():System.Void">
+            <Messages>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnDoneWriting():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(String):Void</Item>
+               <Item>Done writing while already reading!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyOneWriter(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnDoneWriting():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyOneWriter(String):Void</Item>
+               <Item>Done writing while not writing!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnWaitToRead():System.Void">
+            <Messages>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnWaitToRead():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(String):Void</Item>
+               <Item>Reading while already writing!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnWaitToWrite():System.Void">
+            <Messages>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnWaitToWrite():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoReaders(String):Void</Item>
+               <Item>Writing while already reading!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="Wintellect.Threading.ResourceLocks.Diagnostics.ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>ThreadSafeCheckerResourceLockObserver.OnWaitToWrite():Void</Item>
+               <Item>1</Item>
+               <Item>ThreadSafeCheckerResourceLockObserver.VerifyNoWriters(String):Void</Item>
+               <Item>Writing while already writing!</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TimeoutNotifierResourceLockObserver">
+          <Members>
+           <Member Name="OnTimeout(System.Object):System.Void">
+            <Messages>
+             <Message Id="System.TimeoutException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>TimeoutNotifierResourceLockObserver.OnTimeout(Object):Void</Item>
+               <Item>1</Item>
+               <Item>TimeoutException.TimeoutException(String)</Item>
+               <Item>Timed out while waiting for lock. Stack trace of waiting thread follows:__</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Utility">
+        <Types>
+         <Type Name="Flags">
+          <Members>
+           <Member Name="IsClear(System.Int32,System.Int32):System.Boolean">
+            <Messages>
+             <Message Id="System.ArgumentOutOfRangeException.#ctor(System.String,System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Flags.IsClear(Int32, Int32):Boolean</Item>
+               <Item>2</Item>
+               <Item>ArgumentOutOfRangeException.ArgumentOutOfRangeException(String, String)</Item>
+               <Item>Value must not be 0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="IsExactlyOneBitSet(System.Int32):System.Boolean">
+            <Messages>
+             <Message Id="flags-1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>flags-1</Item>
+               <Item>Flags.IsExactlyOneBitSet(Int32):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="IsSet(System.Int32,System.Int32):System.Boolean">
+            <Messages>
+             <Message Id="System.ArgumentOutOfRangeException.#ctor(System.String,System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>Flags.IsSet(Int32, Int32):Boolean</Item>
+               <Item>2</Item>
+               <Item>ArgumentOutOfRangeException.ArgumentOutOfRangeException(String, String)</Item>
+               <Item>Value must not be 0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="0" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OperationTimer">
+          <Members>
+           <Member Name=".cctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Status="Excluded" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>OperationTimer.OperationTimer()</Item>
+               <Item>s_NumOperationTimersStarted</Item>
+               <Item>System.Int32</Item>
+               <Item>0</Item>
+              </Issue>
+              <Notes>
+               <User Name="v-JeffrR">
+                <Note Id="1" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Wintellect.Utility.StateManager">
+        <Types>
+         <Type Name="State">
+          <Members>
+           <Member Name="op_Implicit(Wintellect.Utility.StateManager.State):System.Int32">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>'state'</Item>
+               <Item>State.op_Implicit(State):Int32</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StateManager`1">
+          <Members>
+           <Member Name="GetCurrent():TStateEnum">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2006-10-22 22:35:21Z">
+              <Issue>
+               <Item>GetCurrent</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Notes>
+   <User Name="v-JeffrR">
+    <Note Id="0" Modified="2006-10-24 12:09:20Z">I'm not localizing exception messages</Note>
+    <Note Id="1" Modified="2006-10-24 12:11:04Z">I like to do this as the code is more readable. I assume the JIT compiler optimizes the code.</Note>
+    <Note Id="2" Modified="2006-10-24 12:11:58Z">These do exist on Windows Vista</Note>
+   </User>
+  </Notes>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign '{0}' with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">'{0}' appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="DeclarePInvokesCorrectly" Category="Microsoft.Interoperability" CheckId="CA1415">
+    <Resolution Name="NativeOverlapped">Change the declaration of {0} so that parameter '{1}' is a pointer to System.Threading.NativeOverlapped.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+    <Resolution Name="Default">Make '{0}' private or internal (Friend in VB, public private in C++) and provide a public or protected property to access it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+    <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805">
+    <Resolution Name="Default">{0} initializes field {1} of type {2} to {3}. Remove this initialization as it will be done automatically by the runtime.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotMarkEnumsWithFlags" Category="Microsoft.Usage" CheckId="CA2217">
+    <Resolution Name="Default">{0} is marked with FlagsAttribute but a discrete member cannot be found for every settable bit that is used across the range of enum values. Remove FlagsAttribute from the type or define new members for the following (currently missing) values: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303">
+    <Resolution Name="Default">{0} passes a literal as parameter {1} of a call to {2}. Retrieve the following string argument from a resource table instead: '{3}'</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+    <Resolution Name="Default">Consider a design that does not require that '{0}' be a reference parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+    <Resolution Name="FlagsRename">In enum '{0}', change the name of '{1}' to 'None'.</Resolution>
+   </Rule>
+   <Rule TypeName="EnumStorageShouldBeInt32" Category="Microsoft.Design" CheckId="CA1028">
+    <Resolution Name="NotInt32">If possible, make the underlying type of '{0}' System.Int32 instead of {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="FlagsEnumsShouldHavePluralNames" Category="Microsoft.Naming" CheckId="CA1714">
+    <Resolution Name="Default">If enumeration name '{0}' is singular, change it to a plural form.</Resolution>
+   </Rule>
+   <Rule TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004">
+    <Resolution Name="Default">Consider a design where {0} doesn't require explicit type parameter '{1}' in any call to it.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of the unrecognized token '{0}' in member name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of the unrecognized token '{0}' in type name '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+    <Resolution Name="Default">Rename '{0}' so that it does not end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="Default">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+    <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in VB) of {0} is never used. Mark the member as static (or Shared in VB) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="MembersShouldDifferByMoreThanReturnType" Category="Microsoft.Usage" CheckId="CA2223">
+    <Resolution Name="Default">'{0}' should differ from other members by more than its return type.</Resolution>
+   </Rule>
+   <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+    <Resolution Name="Default">Because it is a DllImport method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   </Rule>
+   <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+    <Resolution Name="Default">Consider making '{0}' non-public or a constant.</Resolution>
+   </Rule>
+   <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+    <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225">
+    <Resolution Name="Multiple">Provide a method named '{0}' or '{1}' as an alternate for operator {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="OverrideLinkDemandsShouldBeIdenticalToBase" Category="Microsoft.Security" CheckId="CA2123">
+    <Resolution Name="BaseOnly">Add the following security attribute to {0} in order to match a LinkDemand on base method {1}:  {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400">
+    <Resolution Name="Default">Correct the declaration of '{0}' so that it correctly points to an existing entry point in {1}. The unmanaged entry point name currently linked to is {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+    <Resolution Name="Default">Change the accessibility of DllImport '{0}' so that it is no longer visible from outside its assembly.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter '{0}' of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SecureGetObjectDataOverrides" Category="Microsoft.Security" CheckId="CA2110">
+    <Resolution Name="Default">Add the following declarative security to {0}: [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter=true)]</Resolution>
+   </Rule>
+   <Rule TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706">
+    <Resolution Name="Member">Correct the capitalization of '{0}' in member name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the capitalization of '{0}' in type name '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+    <Resolution Name="Default">The type name '{0}' conflicts in whole or in part with the namespace name '{1}'. Change either name to eliminate the conflict.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+    <Resolution Name="Default">Implement IDisposable on '{0}' as it instantiates members of the following IDisposable types: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="UseGenericsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1007">
+    <Resolution Name="Default">Consider using generics instead of a reference to System.Object in {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802">
+    <Resolution Name="Default">Field '{0}' is declared as 'static readonly' but is initialized with a constant value '{1}'. Mark this field as 'const' instead.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change '{0}' to a property if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062">
+    <Resolution Name="Default">Validate parameter {0} passed to externally visible method {1}.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

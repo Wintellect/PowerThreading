@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A74FEF61-2540-4C74-9300-2DADEF397CC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wintellect.Threading</RootNamespace>
+    <AssemblyName>Wintellect.Threading</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;INCLUDE_GATES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>TRACE;INCLUDE_GATES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\..\..\Seminars\Threading\Code\PowerThreading\Wintellect.Threading.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile>..\..\baseline.xml</CodeContractsBaseLineFile>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Wintellect.IO\StreamExtensions.cs" />
+    <Compile Include="Wintellect.Threading\ArbitraryWaitHandle.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\ApmWrap.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\CountdownTimer.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\EventApm.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\AsyncEnumerator.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\AsyncResult.cs" />
+    <Compile Include="Wintellect.Threading\AsyncProgModel\SyncGate.cs" />
+    <Compile Include="Wintellect.Threading\LogicalProcessor\NumaInformation.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\ConditionVariable.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\ExclusiveOwnerResourceLockModifier.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\ReaderWriterSlimResourceLock.cs" />
+    <Compile Include="Wintellect.Threading\InterlockedEx.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\ResourceLockDelegator.cs" />
+    <Compile Include="Wintellect.Threading\LogicalProcessor\LogicalProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\RecursionResourceLockModifier.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\StatisticsGatheringResourceLockObserver.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\ThreadSafeCheckerResourceLockObserver.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\Diagnostics\TimeoutNotifierResourceLockObserver.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\NullResourceLock.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\MonitorResourceLock.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\OneManyResourceLock.cs" />
+    <Compile Include="Wintellect.Threading\ResourceLocks\ResourceLock.cs" />
+    <Compile Include="Wintellect.Threading\ReaderWriterGate\ReaderWriterGate.cs" />
+    <Compile Include="Wintellect.Threading\ThreadUtility.cs" />
+    <Compile Include="Wintellect.Threading\SyncContextEventRaiser.cs" />
+    <Compile Include="Wintellect.CmdArgParser\CmdArgAttribute.cs" />
+    <Compile Include="Wintellect.CmdArgParser\CmdArgParser.cs" />
+    <Compile Include="Wintellect.CmdArgParser\CmdArgExceptionArgTypes.cs" />
+    <Compile Include="Wintellect.IO\DeviceIO.cs" />
+    <Compile Include="Wintellect\Contracts.cs" />
+    <Compile Include="Wintellect\Disposer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Wintellect\Exception.cs" />
+    <Compile Include="Wintellect.Threading\Progress.cs" />
+    <Compile Include="Wintellect\OperationTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Wintellect\SafePinnedObject.cs" />
+    <Compile Include="Wintellect\Singleton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

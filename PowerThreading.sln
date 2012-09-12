@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collateral", "Collateral", "{3F2CE97F-49CD-4740-B582-C3D64D3102C3}"
+	ProjectSection(SolutionItems) = preProject
+		Power Threading License.docx = Power Threading License.docx
+		Power Threading Overview.docx = Power Threading Overview.docx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerThreading-Desktop", "PowerThreading-Desktop\PowerThreading-Desktop.csproj", "{A74FEF61-2540-4C74-9300-2DADEF397CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerThreading-Silverlight", "PowerThreading-Silverlight\PowerThreading-Silverlight.csproj", "{263BF5D3-C2C7-41C4-9936-90F0E7C31451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74FEF61-2540-4C74-9300-2DADEF397CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74FEF61-2540-4C74-9300-2DADEF397CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74FEF61-2540-4C74-9300-2DADEF397CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74FEF61-2540-4C74-9300-2DADEF397CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263BF5D3-C2C7-41C4-9936-90F0E7C31451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263BF5D3-C2C7-41C4-9936-90F0E7C31451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263BF5D3-C2C7-41C4-9936-90F0E7C31451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263BF5D3-C2C7-41C4-9936-90F0E7C31451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

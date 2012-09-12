@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <Words>
+    <Unrecognized>
+    </Unrecognized>
+    <Recognized>
+      <Word>Wintellect</Word>
+      <Word>Associativity</Word>
+      <Word>Numa</Word>
+      <Word>Notifier</Word>
+      <Word>Optex</Word>
+      <Word>Multi</Word>
+      <Word>Abortable</Word>
+      <Word></Word>
+      <Word></Word>
+      <Word></Word>
+    </Recognized>
+    <Deprecated>
+    </Deprecated>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>Wct</Acronym>
+      <Acronym>Rpcss</Acronym>
+      <Acronym>Pid</Acronym>
+      <Acronym>Alpc</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

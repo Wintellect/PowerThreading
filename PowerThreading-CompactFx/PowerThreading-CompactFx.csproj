@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F905C677-4009-492E-965D-5473221B6BE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wintellect</RootNamespace>
+    <AssemblyName>Wintellect.Threading.CompactFx</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>PowerThreading_CF</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>C:\Users\Jeffrey\Documents\Projects\PowerThreading\Backup\</UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>C:\Users\Jeffrey\Documents\Seminars\Threading\Code\PowerThreading\Wintellect.Threading.CompactFx.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\PowerThreading\Wintellect.Threading\AsyncProgModel\ApmWrap.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\ApmWrap.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect.Threading\AsyncProgModel\AsyncEnumerator.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\AsyncEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect.Threading\AsyncProgModel\AsyncResult.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\AsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect.Threading\AsyncProgModel\SyncGate.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\SyncGate.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect.Threading\InterlockedEx.cs">
+      <Link>Wintellect.Threading\InterlockedEx.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect\Disposer.cs">
+      <Link>Wintellect\Disposer.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect\Exception.cs">
+      <Link>Wintellect\Exception.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading\Wintellect\Singleton.cs">
+      <Link>Wintellect\Singleton.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

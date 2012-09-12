@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{263BF5D3-C2C7-41C4-9936-90F0E7C31451}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wintellect</RootNamespace>
+    <AssemblyName>Wintellect.Threading.Silverlight</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Seminars\Threading\Code\PowerThreading\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT,INCLUDE_GATES</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>C:\Users\Jeffrey\Documents\Seminars\Threading\Code\PowerThreading\Wintellect.Threading.Silverlight.xml</DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.IO\StreamExtensions.cs">
+      <Link>Wintellect.IO\StreamExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\ApmWrap.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\ApmWrap.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\AsyncEnumerator.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\AsyncEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\AsyncResult.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\AsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\CountdownTimer.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\CountdownTimer.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\EventApm.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\EventApm.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\SyncContextAsyncCallback.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\SyncContextAsyncCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\AsyncProgModel\SyncGate.cs">
+      <Link>Wintellect.Threading\AsyncProgModel\SyncGate.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect.Threading\InterlockedEx.cs">
+      <Link>Wintellect.Threading\InterlockedEx.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect\Contracts.cs">
+      <Link>Wintellect\Contracts.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect\Disposer.cs">
+      <Link>Wintellect\Disposer.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect\Exception.cs">
+      <Link>Wintellect\Exception.cs</Link>
+    </Compile>
+    <Compile Include="..\PowerThreading-Desktop\Wintellect\Singleton.cs">
+      <Link>Wintellect\Singleton.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
