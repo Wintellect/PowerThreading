@@ -243,7 +243,6 @@ namespace Wintellect.Threading.ResourceLocks {
 #if DEADLOCK_DETECTION
          if (s_PerformDeadlockDetection) DeadlockDetector.ReleaseLock(this);
 #endif
-         OnLeave(exclusive);
          if (exclusive) {
             Interlocked.Add(ref m_readWriteCounts, -c_OneWriterCount);
             //if (AcquiringThreadMustRelease) Thread.EndCriticalRegion();
@@ -251,6 +250,7 @@ namespace Wintellect.Threading.ResourceLocks {
             Interlocked.Add(ref m_readWriteCounts, -c_OneReaderCount);
             // When done reading, there is no need to call EndCriticalRegion since resource was not modified
          }
+         OnLeave(exclusive);         
       }
 
       #region Helper Methods
